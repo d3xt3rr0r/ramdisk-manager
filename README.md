@@ -29,7 +29,7 @@ Pozwala tworzyć tymczasowe dyski w RAM, synchronizować dane i zarządzać nimi
 
 1. Sklonuj repozytorium:
 
-git clone https://github.com/TwojNick/ramdisk-manager.git
+git clone https://github.com/d3xt3rr0r/ramdisk-manager.git
 cd ramdisk-manager
 
 2. Nadaj uprawnienia do skryptu uruchamiającego:
