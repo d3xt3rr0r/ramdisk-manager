@@ -27,51 +27,51 @@ Pozwala tworzyć tymczasowe dyski w RAM, synchronizować dane i zarządzać nimi
 
 ## Instalacja
 
-1. Sklonuj repozytorium:
+### 1. Sklonuj repozytorium:
 
 git clone https://github.com/d3xt3rr0r/ramdisk-manager.git
 cd ramdisk-manager
 
-2. Nadaj uprawnienia do skryptu uruchamiającego:
+### 2. Nadaj uprawnienia do skryptu uruchamiającego:
 
 chmod +x run.sh
 
-3. (Opcjonalnie) Dodaj do PATH, żeby uruchamiać z dowolnego miejsca:
+### 3. (Opcjonalnie) Dodaj do PATH, żeby uruchamiać z dowolnego miejsca:
 
 ln -s $(pwd)/run.sh ~/.local/bin/ramdisk-manager
 
-4. Użycie CLI:
+### 4. Użycie CLI:
 
-ramdisk-manager start [sizeGB]    # tworzy RAMdisk o podanym rozmiarze
-ramdisk-manager stop              # synchronizuje dane i usuwa RAMdisk
-ramdisk-manager sync              # synchronizacja RAMdisk -> RAMdisk_data
-ramdisk-manager gui               # uruchamia GUI
+- ramdisk-manager start [sizeGB]    # tworzy RAMdisk o podanym rozmiarze
+- ramdisk-manager stop              # synchronizuje dane i usuwa RAMdisk
+- ramdisk-manager sync              # synchronizacja RAMdisk -> RAMdisk_data
+- ramdisk-manager gui               # uruchamia GUI
 
-5. Użycie GUI:
+### 5. Użycie GUI:
 
 ramdisk-manager gui
 
 W GUI możesz:
 
-Ustawić rozmiar RAMdisk (GB)
-Ustawić interwał autosynchronizacji (minuty)
-Włączyć/wyłączyć RAMdisk
-Synchronizować dane ręcznie
-Śledzić logi i status RAMdisk
+- Ustawić rozmiar RAMdisk (GB)
+- Ustawić interwał autosynchronizacji (minuty)
+- Włączyć/wyłączyć RAMdisk
+- Synchronizować dane ręcznie
+- Śledzić logi i status RAMdisk
 
-6. Struktura projektu:
+### 6. Struktura projektu:
 
-ramdisk-manager/
-├── ramdisk.py       # główny skrypt CLI
-├── gui.py           # GUI
-├── run.sh           # wrapper CLI
-├── config.json      # przykładowy config
-├── README.md        # dokumentacja
-├── LICENSE          # licencja MIT
-└── assets/
-    └── icon.png     # ikona projektu
+- ramdisk-manager/
+- ├── ramdisk.py       # główny skrypt CLI
+- ├── gui.py           # GUI
+- ├── run.sh           # wrapper CLI
+- ├── config.json      # przykładowy config
+- ├── README.md        # dokumentacja
+- ├── LICENSE          # licencja MIT
+- └── assets/
+-     └── icon.png     # ikona projektu
 
-7. Uwagi:
+### 7. Uwagi:
 
 Autosynchronizacja działa tylko w GUI.
 CLI przyjmuje parametr rozmiaru RAMdisk (start [sizeGB]), jeśli nie zostanie podany, używa wartości z config.json.
