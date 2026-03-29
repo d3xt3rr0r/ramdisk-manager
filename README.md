@@ -1,6 +1,5 @@
 # Ramdisk Manager v1.0 by d3xt3rr0r
 
-![Ramdisk Manager](assets/icon.png)
 
 Ramdisk Manager to prosty i wydajny menedżer RAMdisków dla Linuxa z CLI i GUI.  
 Pozwala tworzyć tymczasowe dyski w RAM, synchronizować dane i zarządzać nimi wygodnie z poziomu graficznego interfejsu lub terminala.
