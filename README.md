@@ -68,8 +68,6 @@ W GUI możesz:
 - ├── config.json      # przykładowy config
 - ├── README.md        # dokumentacja
 - ├── LICENSE          # licencja MIT
-- └── assets/
--     └── icon.png     # ikona projektu
 
 ### 7. Uwagi:
 
