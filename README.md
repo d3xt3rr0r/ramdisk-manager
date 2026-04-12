@@ -71,7 +71,7 @@ pip install --user PySide6
 ## 💻 Usage
 
 ### CLI Commands
-First run via `./run.sh` and wrapper will be installed to ~/.local/bin.
+First run via `./run.sh` and wrapper will be installed to `~/.local/bin`
 
 | Command | Description |
 |---------|-------------|
