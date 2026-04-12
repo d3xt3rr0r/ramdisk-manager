@@ -137,6 +137,19 @@ def sync_ramdisk():
     print("Synchronization: RAMDisk ==> RAMDisk_data")
 
 
+def launch_gui():
+    gui_path = os.path.join(os.path.dirname(__file__), "gui.py")
+
+    if not os.path.exists(gui_path):
+        print("Error: gui.py not found")
+        sys.exit(1)
+
+    try:
+        subprocess.Popen(["python3", gui_path])
+    except Exception as e:
+        print(f"Error launching GUI: {e}")
+
+
 # ---------------- CLI ----------------
 def parse_size_arg():
     if len(sys.argv) < 3:
@@ -172,6 +185,9 @@ if __name__ == "__main__":
 
     elif cmd == "sync":
         sync_ramdisk()
+
+    elif cmd == "gui":
+        launch_gui()
 
     else:
         print("Unknown command")
