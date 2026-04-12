@@ -1,6 +1,3 @@
-
----
-
 ```markdown
 <h1 align="center">RAMDisk Manager v1.1</h1>
 <p align="center">
