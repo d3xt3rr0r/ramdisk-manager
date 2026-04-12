@@ -1,74 +1,160 @@
-# Ramdisk Manager v1.0 by d3xt3rr0r
-
-
-Ramdisk Manager to prosty i wydajny menedżer RAMdisków dla Linuxa z CLI i GUI.  
-Pozwala tworzyć tymczasowe dyski w RAM, synchronizować dane i zarządzać nimi wygodnie z poziomu graficznego interfejsu lub terminala.
 
 ---
 
-## Funkcje
+```markdown
+<h1 align="center">RAMDisk Manager v1.1</h1>
+<p align="center">
+  <a href="https://www.python.org/downloads/release/python-38/">
+    <img alt="Python" src="https://img.shields.io/badge/python-3.8%2B-blue.svg?logo=python&logoColor=white">
+  </a>
+  <a href="https://www.gnu.org/software/bash/">
+    <img alt="Shell" src="https://img.shields.io/badge/shell-bash-brightgreen?logo=gnu-bash">
+  </a>
+  <a href="https://github.com/d3xt3rr0r/ramdisk-manager/blob/main/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/d3xt3rr0r/ramdisk-manager?color=green">
+  </a>
+</p>
 
-- Tworzenie i usuwanie RAMdisków o wybranym rozmiarze (GB)
-- Synchronizacja danych między RAMdisk a katalogiem trwałym (`RAMdisk_data`)
-- GUI do kontroli stanu RAMdisk i logów synchronizacji
-- Autosynchronizacja w GUI
-- Prosty interfejs CLI z obsługą parametrów
+<p align="center">
+  <strong>Simple & efficient RAMDisk manager for Linux — with CLI and modern GUI</strong><br>
+  💾 Creates volatile in-RAM filesystems, enables safe data persistence via sync with persistent storage, and features 
+one-click GUI control.
+</p>
 
 ---
 
-## Wymagania
+## ✨ Features
 
-- Linux
-- Python 3.8+  
-- PySide6 (`pip install PySide6`)
+- 🧠 **RAM-based storage** — Create high-speed, volatile `tmpfs` disks of configurable size
+- 🔄 **Bi-directional sync** — Automatic and manual sync between RAM disk and persistent `RAMDisk_data/` folder
+- 🖥 **Dual interfaces** — Full CLI for scripting & terminal workflows + modern GUI (built with PySide6) for daily use
+- 🔒 **Secure password handling** — Uses `pkexec` for privileged operations — no terminal password input needed
+- ⏱ **Auto-sync scheduling** — Configure periodic sync intervals in GUI (CLI requires manual triggers)
+- 📊 **Real-time status** — GUI logs mount state, sync history, and warnings
 
 ---
 
-## Instalacja
+## 📋 Requirements
 
-### 1. Sklonuj repozytorium:
+| Component | Requirement |
+|-----------|-------------|
+| OS        | Linux (tested on Ubuntu, Fedora, Arch) |
+| Python    | ≥ 3.8 (`python3 --version`) |
+| Runtime   | `rsync`, `mount`, `umount` (standard on all major distros) |
+| GUI       | `polkit` + `pkexec` (for secure sudo-equivalent auth) <br> *Optional: `zenity`/`yad` for fallback auth 
+if PolicyKit not available* |
+| GUI lib   | `PySide6` (`pip install PySide6`) |
 
+> 💡 **Note**: `pkexec` is required for the GUI's *mount/umount* buttons. If missing, the app will fall back to 
+warning the user (CLI still works with `sudo`).
+
+---
+
+## 🚀 Installation
+
+### 1. Clone the repository
+```bash
 git clone https://github.com/d3xt3rr0r/ramdisk-manager.git
 cd ramdisk-manager
+```
 
-### 2. Nadaj uprawnienia do skryptu uruchamiającego:
-
+### 2. Make the wrapper executable
+```bash
 chmod +x run.sh
+```
 
-### 3. (Opcjonalnie) Dodaj do PATH, żeby uruchamiać z dowolnego miejsca:
+### 3. (Optional) Add to `PATH` for global access
+```bash
+ln -sf "$(pwd)/run.sh" ~/.local/bin/ramdisk-manager
+# Ensure ~/.local/bin/ is in your $PATH
+```
 
-ln -s $(pwd)/run.sh ~/.local/bin/ramdisk-manager
+### 4. Install GUI dependency (if using GUI)
+```bash
+pip install --user PySide6
+```
 
-### 4. Użycie CLI:
+---
 
-- ramdisk-manager start [sizeGB]    # tworzy RAMdisk o podanym rozmiarze
-- ramdisk-manager stop              # synchronizuje dane i usuwa RAMdisk
-- ramdisk-manager sync              # synchronizacja RAMdisk -> RAMdisk_data
-- ramdisk-manager gui               # uruchamia GUI
+## 💻 Usage
 
-### 5. Użycie GUI:
+### CLI Commands
+Run via `./run.sh` or `ramdisk-manager` (if in `PATH`):
 
+| Command | Description |
+|---------|-------------|
+| `ramdisk-manager start [sizeGB]` | Mount RAM disk of given size (default: from `config.json`) |
+| `ramdisk-manager stop` | Sync RAM → persistent store, then unmount & delete |
+| `ramdisk-manager sync` | One-time RAM → persistent sync (CLI-only) |
+| `ramdisk-manager gui` | Launch GUI (requires PySide6) |
+
+> ⚠ **Root permissions** are requested via GUI dialog or terminal (via `pkexec`/`sudo`).  
+> 📝 **Config** is stored in `~/.config/ramdisk-manager/config.json`  
+> 📁 **Paths**:  
+> - RAM disk: `~/RAMDisk/`  
+> - Persistent backup: `~/RAMDisk_data/`
+
+---
+
+### 🖥 GUI Interface
+Launch with:
+```bash
 ramdisk-manager gui
+```
 
-W GUI możesz:
+#### Main controls:
+- 🔲 **Mount RAMDisk**: Set size (GB) & click *Start*  
+- ⏹ **Unmount**: Click *Stop* (triggers sync first)  
+- 🔄 **Sync Now**: One-time manual sync  
+- ⏱ **Auto-sync interval**: Minutes (0 = disabled)  
+- 📜 **Log Panel**: Real-time terminal output  
+- 🛠 **Config editor**: Adjust defaults (size, interval)  
+- ℹ **Status**: Shows mount state & sync last run time  
 
-- Ustawić rozmiar RAMdisk (GB)
-- Ustawić interwał autosynchronizacji (minuty)
-- Włączyć/wyłączyć RAMdisk
-- Synchronizować dane ręcznie
-- Śledzić logi i status RAMdisk
+![GUI mockup](https://placehold.co/600x400/2c2c2c/ffffff?text=GUI+Preview+(not+real))  
+*(Placeholder — actual GUI features native PySide6 widgets)*
 
-### 6. Struktura projektu:
+---
 
-- ramdisk-manager/
-- ├── ramdisk.py       # główny skrypt CLI
-- ├── gui.py           # GUI
-- ├── run.sh           # wrapper CLI
-- ├── config.json      # przykładowy config
-- ├── README.md        # dokumentacja
-- ├── LICENSE          # licencja MIT
+## 🗂 Project Structure
 
-### 7. Uwagi:
+```
+ramdisk-manager/
+├── ramdisk.py         # Core CLI logic (mount/umount/sync)
+├── gui.py             # PySide6 GUI (configurable widgets + logs)
+├── run.sh             # Bash wrapper (imports/invokes ramdisk.py)
+├── config.json        # Sample config (auto-generated on first run)
+├── README.md          # This file
+└── LICENSE            # MIT License
+```
 
-Autosynchronizacja działa tylko w GUI.
-CLI przyjmuje parametr rozmiaru RAMdisk (start [sizeGB]), jeśli nie zostanie podany, używa wartości z config.json.
+> 🔧 All paths are relative to `$HOME`. No system-wide changes made.
+
+---
+
+## 📌 Notes & Troubleshooting
+
+| Issue | Solution |
+|-------|----------|
+| `pkexec` not found | Install `polkit` (`sudo apt install polkit`, `sudo pacman -S polkit`, etc.) |
+| GUI fails to start | Check: `python3 -m PySide6` → install `PySide6` if missing |
+| Sync fails with `rsync` error | Ensure `rsync` installed: `sudo apt install rsync` |
+| Already mounted | CLI prints warning; GUI shows current state & disables mount button |
+| Persistent data lost | Data in `~/RAMdisk/` is volatile — always sync before unmount! |
+
+---
+
+## 📄 License
+
+Distributed under the **[MIT License](https://github.com/d3xt3rr0r/ramdisk-manager/blob/main/LICENSE)**.  
+© 2024 [d3xt3rr0r](https://github.com/d3xt3rr0r)
+
+---
+
+<p align="center">
+  <i>Happy RAM-hacking! 🧠💾🚀</i><br>
+  <sub>Feedback, PRs & issues welcome!</sub>
+</p>
+```
+
+---
