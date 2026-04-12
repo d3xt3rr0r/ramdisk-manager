@@ -80,11 +80,11 @@ First run via `./run.sh` and wrapper will be installed to ~/.local/bin.
 | `ramdisk-manager sync` | One-time RAM → persistent sync (CLI-only) |
 | `ramdisk-manager gui` | Launch GUI (requires PySide6) |
 
-> ⚠ **Root permissions** are requested via GUI dialog or terminal (via `pkexec`/`sudo`).  
 > 📝 **All files** should be stored in `~/.config/ramdisk-manager`  
 > 📁 **Paths**:  
 > - RAM disk: `~/RAMDisk/`  
 > - Persistent backup: `~/RAMDisk_data/`
+> ⚠ **Root permissions** are requested via GUI dialog or terminal (via `pkexec`/`sudo`).
 
 ---
 
