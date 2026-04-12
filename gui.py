@@ -63,7 +63,7 @@ class RamdiskGUI(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("RAMDisk Manager v1.1 by d3xt3rr0r")
-        self.setFixedSize(600, 400)
+        self.setFixedSize(340, 320)
         self.workers = []
         self.last_cmd = None
 
