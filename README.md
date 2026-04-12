@@ -81,7 +81,7 @@ First run via `./run.sh` and wrapper will be installed to ~/.local/bin.
 | `ramdisk-manager gui` | Launch GUI (requires PySide6) |
 
 > ⚠ **Root permissions** are requested via GUI dialog or terminal (via `pkexec`/`sudo`).  
-> 📝 **Config** is stored in `~/.config/ramdisk-manager/config.json`  
+> 📝 **All files** should be stored in `~/.config/ramdisk-manager`  
 > 📁 **Paths**:  
 > - RAM disk: `~/RAMDisk/`  
 > - Persistent backup: `~/RAMDisk_data/`
@@ -110,7 +110,7 @@ ramdisk-manager gui
 ## 🗂 Project Structure
 
 ```
-ramdisk-manager/
+~/.config/ramdisk-manager/
 ├── ramdisk.py         # Core CLI logic (mount/umount/sync)
 ├── gui.py             # PySide6 GUI (configurable widgets + logs)
 ├── run.sh             # Bash wrapper (imports/invokes ramdisk.py)
@@ -118,8 +118,6 @@ ramdisk-manager/
 ├── README.md          # This file
 └── LICENSE            # MIT License
 ```
-
-> 🔧 All paths are relative to `$HOME`. No system-wide changes made.
 
 ---
 
