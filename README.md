@@ -1,7 +1,7 @@
 
 ---
 
-<h1 align="center">RAMDisk Manager v1.1</h1>
+<h1 align="center">RAMDisk_Manager_v1.1.1</h1>
 <p align="center">
   <a href="https://www.python.org/downloads/release/python-38/">
     <img alt="Python" src="https://img.shields.io/badge/python-3.8%2B-blue.svg?logo=python&logoColor=white">
@@ -106,7 +106,7 @@ ramdisk-manager gui
 - 🛠 **Config editor**: Adjust defaults (size, interval)  
 - ℹ **Status**: Shows mount state & sync last run time  
 
-![GUI mockup](https://i.imgur.com/RYFEZlC.png)  
+![GUI mockup](https://i.imgur.com/gApU95H.png)  
 
 ---
 
