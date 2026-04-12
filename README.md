@@ -1,4 +1,7 @@
-```markdown
+
+---
+
+
 <h1 align="center">RAMDisk Manager v1.1</h1>
 <p align="center">
   <a href="https://www.python.org/downloads/release/python-38/">
@@ -23,7 +26,7 @@ one-click GUI control.
 ## ✨ Features
 
 - 🧠 **RAM-based storage** — Create high-speed, volatile `tmpfs` disks of configurable size
-- 🔄 **Bi-directional sync** — Automatic and manual sync between RAM disk and persistent `RAMDisk_data/` folder
+- 🔄 **Bi-directional sync** — Automatic and manual sync between RAM disk and persistent `RAMdisk_data/` folder
 - 🖥 **Dual interfaces** — Full CLI for scripting & terminal workflows + modern GUI (built with PySide6) for daily use
 - 🔒 **Secure password handling** — Uses `pkexec` for privileged operations — no terminal password input needed
 - ⏱ **Auto-sync scheduling** — Configure periodic sync intervals in GUI (CLI requires manual triggers)
@@ -88,8 +91,8 @@ Run via `./run.sh` or `ramdisk-manager` (if in `PATH`):
 > ⚠ **Root permissions** are requested via GUI dialog or terminal (via `pkexec`/`sudo`).  
 > 📝 **Config** is stored in `~/.config/ramdisk-manager/config.json`  
 > 📁 **Paths**:  
-> - RAM disk: `~/RAMDisk/`  
-> - Persistent backup: `~/RAMDisk_data/`
+> - RAM disk: `~/RAMdisk/`  
+> - Persistent backup: `~/RAMdisk_data/`
 
 ---
 
@@ -100,7 +103,7 @@ ramdisk-manager gui
 ```
 
 #### Main controls:
-- 🔲 **Mount RAMDisk**: Set size (GB) & click *Start*  
+- 🔲 **Mount RAMdisk**: Set size (GB) & click *Start*  
 - ⏹ **Unmount**: Click *Stop* (triggers sync first)  
 - 🔄 **Sync Now**: One-time manual sync  
 - ⏱ **Auto-sync interval**: Minutes (0 = disabled)  
@@ -155,3 +158,4 @@ Distributed under the **[MIT License](https://github.com/d3xt3rr0r/ramdisk-manag
 ```
 
 ---
+
