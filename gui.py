@@ -62,14 +62,14 @@ class CmdWorker(QThread):
 class RamdiskGUI(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("RAMDisk Manager v1.1 by d3xt3rr0r")
-        self.setFixedSize(340, 320)
+        self.setWindowTitle("RAMDisk_Manager_v1.1.1")
+        self.setFixedSize(300, 300)
         self.workers = []
         self.last_cmd = None
 
         config = load_config()
 
-        self.status_label = QLabel("Status: Unknown")
+        self.status_label = QLabel("--------------------  Status:  UNKNOWN  --------------------")
 
         self.size_spin = QSpinBox()
         self.size_spin.setRange(1, 1024)
@@ -94,12 +94,12 @@ class RamdiskGUI(QWidget):
         layout.addWidget(self.status_label)
 
         h1 = QHBoxLayout()
-        h1.addWidget(QLabel("RAMDisk Size (GB):"))
+        h1.addWidget(QLabel("RAMDisk size |GB|:                        "))
         h1.addWidget(self.size_spin)
         layout.addLayout(h1)
 
         h2 = QHBoxLayout()
-        h2.addWidget(QLabel("Auto-Sync Interval (min):"))
+        h2.addWidget(QLabel("Auto-sync interval |min|:            "))
         h2.addWidget(self.sync_spin)
         layout.addLayout(h2)
 
@@ -128,13 +128,13 @@ class RamdiskGUI(QWidget):
     def update_status(self):
         output = subprocess.getoutput(f"mount | grep {RAMDISK_PATH}")
         if RAMDISK_PATH in output:
-            self.status_label.setText("Status: Mounted")
+            self.status_label.setText("--------------------  Status:  MOUNTED  --------------------")
         else:
-            self.status_label.setText("Status: Not Mounted")
+            self.status_label.setText("----------------  Status:  NOT MOUNTED  ----------------")
 
     # ---------------- AUTOSYNC ----------------
     def autosync(self):
-        if "Mounted" not in self.status_label.text():
+        if "MOUNTED" not in self.status_label.text():
             return
 
         self.last_cmd = "autosync"
@@ -193,7 +193,7 @@ class RamdiskGUI(QWidget):
         interval = self.sync_spin.value()
 
         if self.last_cmd in ["start", "sync"]:
-            self.log_text.append(f"Auto-Sync enabled ({interval}min)")
+            self.log_text.append(f"|   Auto-sync interval:  {interval}min")
 
         self.update_status()
 
