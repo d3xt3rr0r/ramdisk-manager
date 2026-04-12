@@ -154,6 +154,5 @@ Distributed under the **[MIT License](https://github.com/d3xt3rr0r/ramdisk-manag
   <sub>Feedback, PRs & issues welcome!</sub>
 </p>
 
-
 ---
 
