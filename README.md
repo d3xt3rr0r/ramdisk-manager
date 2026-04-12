@@ -82,8 +82,9 @@ First run via `./run.sh` and wrapper will be installed to ~/.local/bin.
 
 > ⚠ **Root permissions** are requested via GUI dialog or terminal (via `pkexec`/`sudo`).
 >   
-> 📝 **All files** should be stored in `~/.config/ramdisk-manager`  
-> 📁 **Paths**:  
+> 📝 **All program files** should be stored in `~/.config/ramdisk-manager`
+>   
+> 📁 **Data paths**:  
 > - RAM disk: `~/RAMDisk/`  
 > - Persistent backup: `~/RAMDisk_data/`
 
