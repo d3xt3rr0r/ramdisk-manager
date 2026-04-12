@@ -71,7 +71,7 @@ pip install --user PySide6
 ## 💻 Usage
 
 ### CLI Commands
-Run via `./run.sh` or `ramdisk-manager` (if in `PATH`):
+First run via `./run.sh` and wrapper will be installed to ~/.local/bin.
 
 | Command | Description |
 |---------|-------------|
