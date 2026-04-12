@@ -41,7 +41,6 @@ one-click GUI control.
 | Python    | ≥ 3.8 (`python3 --version`) |
 | Runtime   | `rsync`, `mount`, `umount` (standard on all major distros) |
 | GUI       | `polkit` + `pkexec` (for secure sudo-equivalent auth) <br> *Optional: `zenity`/`yad` for fallback auth 
-if PolicyKit not available* |
 | GUI lib   | `PySide6` (`pip install PySide6`) |
 
 > 💡 **Note**: `pkexec` is required for the GUI's *mount/umount* buttons. If missing, the app will fall back to 
@@ -102,7 +101,7 @@ ramdisk-manager gui
 ```
 
 #### Main controls:
-- 🔲 **Mount RAMDisk**: Set size (GB) & click *Start*  
+- 🔲 **Mount RAMDisk**: Set size in GB (1-1024) & click *Start*  
 - ⏹ **Unmount**: Click *Stop* (triggers sync first)  
 - 🔄 **Sync Now**: One-time manual sync  
 - ⏱ **Auto-sync interval**: Minutes (1-1440)  
@@ -138,7 +137,6 @@ ramdisk-manager/
 | GUI fails to start | Check: `python3 -m PySide6` → install `PySide6` if missing |
 | Sync fails with `rsync` error | Ensure `rsync` installed: `sudo apt install rsync` |
 | Already mounted | CLI prints warning; GUI shows current state & disables mount button |
-| Persistent data lost | Data in `~/RAMdisk/` is volatile — always sync before unmount! |
 
 ---
 
