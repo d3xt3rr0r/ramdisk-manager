@@ -12,7 +12,7 @@ from PySide6.QtCore import QTimer, QThread, Signal
 USER_HOME = os.path.expanduser("~")
 RAMDISK_CLI = os.path.join(USER_HOME, ".config", "ramdisk-manager", "ramdisk.py")
 CONFIG_PATH = os.path.join(USER_HOME, ".config", "ramdisk-manager", "config.json")
-RAMDISK_PATH = os.path.join(USER_HOME, "RAMdisk")
+RAMDISK_PATH = os.path.join(USER_HOME, "RAMDisk")
 
 DEFAULT_CONFIG = {"size_gb": 4, "interval_min": 1}
 
@@ -62,7 +62,7 @@ class CmdWorker(QThread):
 class RamdiskGUI(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("Ramdisk Manager v1.0 by d3xt3rr0r")
+        self.setWindowTitle("RAMDisk Manager v1.1 by d3xt3rr0r")
         self.setFixedSize(600, 400)
         self.workers = []
         self.last_cmd = None
@@ -94,7 +94,7 @@ class RamdiskGUI(QWidget):
         layout.addWidget(self.status_label)
 
         h1 = QHBoxLayout()
-        h1.addWidget(QLabel("RAMdisk Size (GB):"))
+        h1.addWidget(QLabel("RAMDisk Size (GB):"))
         h1.addWidget(self.size_spin)
         layout.addLayout(h1)
 
