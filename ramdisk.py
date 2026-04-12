@@ -23,7 +23,7 @@ def load_config():
         with open(CONFIG_PATH, "r") as f:
             return json.load(f)
     except (json.JSONDecodeError, ValueError):
-        print("Uwaga: config.json uszkodzony, przywracam domyślny")
+        print("Warning: config.json corrupted, restoring default")
         save_config(DEFAULT_CONFIG)
         return DEFAULT_CONFIG
 
@@ -70,7 +70,7 @@ def mount_ramdisk(size_gb):
     # Sprawdź czy już zamontowany
     mounts = subprocess.getoutput("mount")
     if RAMDISK_PATH in mounts:
-        print("RAMDisk już zamontowany")
+        print("RAMDisk already mounted")
         return
 
     try:
@@ -82,11 +82,11 @@ def mount_ramdisk(size_gb):
             ],
             check=True
         )
-        print(f"Utworzono RAMDisk: {RAMDISK_PATH} ({size_gb}GB)")
+        print(f"RAMDisk created: {RAMDISK_PATH} ({size_gb}GB)")
     except subprocess.CalledProcessError as e:
-        print(f"Błąd montowania RAMDisk: {e}")
+        print(f"Error mounting RAMDisk: {e}")
     except FileNotFoundError:
-        print("Błąd: pkexec nie jest dostępny — zainstaluj `polkit` lub użyj sudo w terminalu")
+        print("Error: pkexec not available - install `polkit` or use sudo in terminal")
 
 
 def remove_ramdisk():
@@ -104,11 +104,11 @@ def remove_ramdisk():
                     check=True
                 )
             except subprocess.CalledProcessError:
-                print("Nie udało się odmontować RAMDisku — spróbuj ręcznie")
+                print("Unmounting RAMDisk failed - try manually")
                 return
 
         shutil.rmtree(RAMDISK_PATH, ignore_errors=True)
-        print("Odmontowano i usunięto RAMDisk")
+        print("Unmounted and deleted RAMDisk")
 
 
 # ---------------- COMMANDS ----------------
@@ -124,19 +124,19 @@ def start_ramdisk(size_gb=None):
 
     mount_ramdisk(mount_size)
     restore_to_ramdisk()
-    print("Synchronizacja: RAMDisk_data => RAMDisk")
+    print("Synchronization: RAMDisk_data ==> RAMDisk")
 
 
 def stop_ramdisk():
     sync_to_data()
-    print("Synchronizacja: RAMDisk => RAMDisk_data")
+    print("Synchronization: RAMDisk ==> RAMDisk_data")
     remove_ramdisk()
 
 
 def sync_ramdisk():
     os.makedirs(RAMDISK_DATA, exist_ok=True)
     sync_to_data()
-    print("Synchronizacja: RAMDisk => RAMDisk_data")
+    print("Synchronization: RAMDisk ==> RAMDisk_data")
 
 
 # ---------------- CLI ----------------
@@ -162,4 +162,3 @@ if __name__ == "__main__":
 
     else:
         print("Unknown command")
-
