@@ -153,7 +153,7 @@ Distributed under the **[MIT License](https://github.com/d3xt3rr0r/ramdisk-manag
   <i>Happy RAM-hacking! 🧠💾🚀</i><br>
   <sub>Feedback, PRs & issues welcome!</sub>
 </p>
-```
+
 
 ---
 
