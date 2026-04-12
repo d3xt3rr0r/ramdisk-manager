@@ -25,7 +25,7 @@ one-click GUI control.
 ## ✨ Features
 
 - 🧠 **RAM-based storage** — Create high-speed, volatile `tmpfs` disks of configurable size
-- 🔄 **Bi-directional sync** — Automatic and manual sync between RAM disk and persistent `RAMdisk_data/` folder
+- 🔄 **Bi-directional sync** — Automatic and manual sync between RAM disk and persistent `RAMDisk_data/` folder
 - 🖥 **Dual interfaces** — Full CLI for scripting & terminal workflows + modern GUI (built with PySide6) for daily use
 - 🔒 **Secure password handling** — Uses `pkexec` for privileged operations — no terminal password input needed
 - ⏱ **Auto-sync scheduling** — Configure periodic sync intervals in GUI (CLI requires manual triggers)
@@ -90,8 +90,8 @@ Run via `./run.sh` or `ramdisk-manager` (if in `PATH`):
 > ⚠ **Root permissions** are requested via GUI dialog or terminal (via `pkexec`/`sudo`).  
 > 📝 **Config** is stored in `~/.config/ramdisk-manager/config.json`  
 > 📁 **Paths**:  
-> - RAM disk: `~/RAMdisk/`  
-> - Persistent backup: `~/RAMdisk_data/`
+> - RAM disk: `~/RAMDisk/`  
+> - Persistent backup: `~/RAMDisk_data/`
 
 ---
 
@@ -102,7 +102,7 @@ ramdisk-manager gui
 ```
 
 #### Main controls:
-- 🔲 **Mount RAMdisk**: Set size (GB) & click *Start*  
+- 🔲 **Mount RAMDisk**: Set size (GB) & click *Start*  
 - ⏹ **Unmount**: Click *Stop* (triggers sync first)  
 - 🔄 **Sync Now**: One-time manual sync  
 - ⏱ **Auto-sync interval**: Minutes (0 = disabled)  
