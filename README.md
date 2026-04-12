@@ -110,8 +110,7 @@ ramdisk-manager gui
 - 🛠 **Config editor**: Adjust defaults (size, interval)  
 - ℹ **Status**: Shows mount state & sync last run time  
 
-![GUI mockup](https://placehold.co/600x400/2c2c2c/ffffff?text=GUI+Preview+(not+real))  
-*(Placeholder — actual GUI features native PySide6 widgets)*
+![GUI mockup](https://imgur.com/a/zgBaq1o)  
 
 ---
 
