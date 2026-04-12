@@ -99,7 +99,7 @@ class RamdiskGUI(QWidget):
         layout.addLayout(h1)
 
         h2 = QHBoxLayout()
-        h2.addWidget(QLabel("Autosync Interval (min):"))
+        h2.addWidget(QLabel("Auto-Sync Interval (min):"))
         h2.addWidget(self.sync_spin)
         layout.addLayout(h2)
 
