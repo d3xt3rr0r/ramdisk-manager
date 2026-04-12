@@ -61,13 +61,7 @@ cd ramdisk-manager
 chmod +x run.sh
 ```
 
-### 3. (Optional) Add to `PATH` for global access
-```bash
-ln -sf "$(pwd)/run.sh" ~/.local/bin/ramdisk-manager
-# Ensure ~/.local/bin/ is in your $PATH
-```
-
-### 4. Install GUI dependency (if using GUI)
+### 3. Install GUI dependency (if using GUI)
 ```bash
 pip install --user PySide6
 ```
