@@ -193,7 +193,7 @@ class RamdiskGUI(QWidget):
         interval = self.sync_spin.value()
 
         if self.last_cmd in ["start", "sync"]:
-            self.log_text.append(f"Włączono Autosynchronizację ({interval}min)")
+            self.log_text.append(f"Auto-Sync enabled ({interval}min)")
 
         self.update_status()
 
