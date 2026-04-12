@@ -27,6 +27,7 @@ def load_config():
         save_config(DEFAULT_CONFIG)
         return DEFAULT_CONFIG
 
+
 def save_config(config):
     os.makedirs(os.path.dirname(CONFIG_PATH), exist_ok=True)
     with open(CONFIG_PATH, "w") as f:
@@ -67,14 +68,12 @@ def restore_to_ramdisk():
 def mount_ramdisk(size_gb):
     os.makedirs(RAMDISK_PATH, exist_ok=True)
 
-    # Sprawdź czy już zamontowany
     mounts = subprocess.getoutput("mount")
     if RAMDISK_PATH in mounts:
         print("RAMDisk already mounted")
         return
 
     try:
-        # Używamy pkexec zamiast sudo — pozwala na graficzne okno hasła
         subprocess.run(
             [
                 "pkexec",
@@ -97,7 +96,6 @@ def remove_ramdisk():
                 check=True
             )
         except subprocess.CalledProcessError:
-            # Jeśli nie udane — spróbuj force
             try:
                 subprocess.run(
                     ["pkexec", "umount", "-l", RAMDISK_PATH],
@@ -140,6 +138,21 @@ def sync_ramdisk():
 
 
 # ---------------- CLI ----------------
+def parse_size_arg():
+    if len(sys.argv) < 3:
+        return None
+
+    raw = sys.argv[2].strip()
+    if raw == "":
+        return None
+
+    try:
+        return int(raw)
+    except ValueError:
+        print("Error: size must be an integer")
+        sys.exit(1)
+
+
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Usage:")
@@ -151,7 +164,7 @@ if __name__ == "__main__":
     cmd = sys.argv[1]
 
     if cmd == "start":
-        size = int(sys.argv[2]) if len(sys.argv) >= 3 else None
+        size = parse_size_arg()
         start_ramdisk(size)
 
     elif cmd == "stop":
