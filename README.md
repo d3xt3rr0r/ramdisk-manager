@@ -5,14 +5,14 @@
 <tr>
 <td>
 <p align="center>
-  <a href="https://github.com/d3xt3rr0r/ramdisk-manager/blob/main/icon_black.png?raw=true">
-    <img alt="Icon" src="https://github.com/d3xt3rr0r/ramdisk-manager/blob/main/icon_black.png?raw=true">
+  <a href="https://github.com/d3xt3rr0r/ramdisk-manager/blob/main/icon_black.png">
+    <img alt="Icon" src="https://github.com/d3xt3rr0r/ramdisk-manager/blob/main/icon_black.png">
   </a>
 </td>
 <td>
 <p align="center">
-  <a href="https://github.com/d3xt3rr0r/ramdisk-manager/blob/main/icon_white.png?raw=true">
-    <img alt="Icon" src="https://github.com/d3xt3rr0r/ramdisk-manager/blob/main/icon_white.png?raw=true">
+  <a href="https://github.com/d3xt3rr0r/ramdisk-manager/blob/main/icon_white.png">
+    <img alt="Icon" src="https://github.com/d3xt3rr0r/ramdisk-manager/blob/main/icon_white.png">
   </a>
 </td>
 </tr>
