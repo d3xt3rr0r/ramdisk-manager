@@ -64,7 +64,7 @@ class CmdWorker(QThread):
 class RamdiskGUI(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("RAMDisk Manager v1.1.2")
+        self.setWindowTitle("|  RAMDisk Manager  |  v1.1.2")
         self.setFixedSize(300, 300)
         self.setWindowIcon(QIcon(icon_path))
         self.workers = []
