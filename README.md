@@ -1,7 +1,7 @@
 
 ---
 
-<table>
+<table align="center">
 <tr>
 <td>
 <p align="center>
@@ -17,17 +17,6 @@
 </td>
 </tr>
 </table>
-<style>
-  .center {
-    margin-left: auto;
-    margin-right: auto;
-    border-collapse: collapse;
-  }
-  td {
-    border: 1px solid black;
-    padding: 10px;
-  }
-</style>
 <h1 align="center">RAMDisk_Manager_v1.1.1</h1>
 <p align="center">
   <a href="https://www.python.org/downloads/release/python-38/">
