@@ -17,7 +17,7 @@
 </td>
 </tr>
 </table>
-<h1 align="center">RAMDisk_Manager_v1.1.1</h1>
+<h1 align="center">RAMDisk Manager v1.1.2</h1>
 <p align="center">
   <a href="https://www.python.org/downloads/release/python-38/">
     <img alt="Python" src="https://img.shields.io/badge/python-3.8%2B-blue.svg?logo=python&logoColor=white">
@@ -134,6 +134,8 @@ ramdisk-manager gui
 ├── gui.py             # PySide6 GUI (configurable widgets + logs)
 ├── run.sh             # Bash wrapper (imports/invokes ramdisk.py)
 ├── config.json        # Sample config (auto-generated on first run)
+├── icon_black.png     # Black icon
+├── icon_white.png     # White icon
 ├── README.md          # This file
 └── LICENSE            # MIT License
 ```
