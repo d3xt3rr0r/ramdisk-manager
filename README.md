@@ -122,7 +122,7 @@ ramdisk-manager gui
 - 🛠 **Config editor**: Adjust defaults (size, interval)  
 - ℹ **Status**: Shows mount state & sync last run time  
 
-![GUI mockup](https://i.imgur.com/gWDlx6f.png)  
+![GUI mockup](https://i.imgur.com/E6lO1bL.png)  
 
 ---
 
