@@ -120,7 +120,7 @@ ramdisk-manager gui
 - ⏱ **Auto-sync interval**: Minutes (1-1440)  
 - 📜 **Log Panel**: Real-time terminal output  
 - 🛠 **Config editor**: Adjust defaults (size, interval)  
-- ℹ **Status**: Shows mount state & sync last run time  
+- ℹ️ **Status**: Shows mount state & sync last run time  
 
 ![GUI mockup](https://i.imgur.com/RitqYPj.png)  
 ![GUI mockup](https://i.imgur.com/E6lO1bL.png)  
