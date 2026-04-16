@@ -1,6 +1,7 @@
 
 ---
 
+<table>
 <ul>
 <li>
 <p align="center>
@@ -15,6 +16,7 @@
   </a>
 </li>
 </ul>
+</table>
 <h1 align="center">RAMDisk_Manager_v1.1.1</h1>
 <p align="center">
   <a href="https://www.python.org/downloads/release/python-38/">
