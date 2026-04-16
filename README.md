@@ -104,7 +104,6 @@ First run via `./run.sh` and wrapper will be installed to `~/.local/bin`
 > - RAM disk: `~/RAMDisk/`  
 > - Persistent backup: `~/RAMDisk_data/`
 
-
 ---
 
 ### 🖥 GUI Interface
@@ -122,7 +121,7 @@ ramdisk-manager gui
 - 🛠 **Config editor**: Adjust defaults (size, interval)  
 - ℹ️ **Status**: Shows mount state & sync last run time  
 
-![GUI mockup](
+![GUI mockup]()   
 
 <table align="center">
 <tr>
@@ -140,8 +139,6 @@ ramdisk-manager gui
 </td>
 </tr>
 </table>
-
-)   
 
 ---
 
