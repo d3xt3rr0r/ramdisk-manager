@@ -23,7 +23,7 @@ def load_config():
         with open(CONFIG_PATH, "r") as f:
             return json.load(f)
     except (json.JSONDecodeError, ValueError):
-        print("|   Warning:  config.json corrupted, restoring default")
+        print("├─── Warning: config.json corrupted, restoring default")
         save_config(DEFAULT_CONFIG)
         return DEFAULT_CONFIG
 
@@ -70,7 +70,7 @@ def mount_ramdisk(size_gb):
 
     mounts = subprocess.getoutput("mount")
     if RAMDISK_PATH in mounts:
-        print("|   RAMDisk already mounted")
+        print("├─── RAMDisk already mounted")
         return
 
     try:
@@ -81,12 +81,12 @@ def mount_ramdisk(size_gb):
             ],
             check=True
         )
-        print(f"|   RAMDisk created:  {size_gb} GB")
-        print(f"|   Path:  {RAMDISK_PATH}")
+        print(f"├─── RAMDisk created: {size_gb} GB")
+        print(f"├─── Path: {RAMDISK_PATH}")
     except subprocess.CalledProcessError as e:
-        print(f"|   Error mounting RAMDisk: {e}")
+        print(f"├─── Error mounting RAMDisk: {e}")
     except FileNotFoundError:
-        print("|   Error:  pkexec not available - install `polkit` or use sudo in terminal")
+        print("├─── Error: pkexec not available - install `polkit` or use sudo in terminal")
 
 
 def remove_ramdisk():
@@ -103,11 +103,11 @@ def remove_ramdisk():
                     check=True
                 )
             except subprocess.CalledProcessError:
-                print("|   Unmounting RAMDisk failed - try manually")
+                print("├─── Unmounting RAMDisk failed - try manually")
                 return
 
         shutil.rmtree(RAMDISK_PATH, ignore_errors=True)
-        print("|   RAMDisk unmounted & deleted")
+        print("└─── RAMDisk unmounted & deleted")
 
 
 # ---------------- COMMANDS ----------------
@@ -123,32 +123,32 @@ def start_ramdisk(size_gb=None):
 
     mount_ramdisk(mount_size)
     restore_to_ramdisk()
-    print("|   Sync:  RAMDisk_data => RAMDisk")
+    print("├─── Sync: RAMDisk_data ► RAMDisk")
 
 
 def stop_ramdisk():
     sync_to_data()
-    print("|   Sync:  RAMDisk => RAMDisk_data")
+    print("├─── Sync: RAMDisk ► RAMDisk_data")
     remove_ramdisk()
 
 
 def sync_ramdisk():
     os.makedirs(RAMDISK_DATA, exist_ok=True)
     sync_to_data()
-    print("|   Sync:  RAMDisk => RAMDisk_data")
+    print("├─── Sync: RAMDisk ► RAMDisk_data")
 
 
 def launch_gui():
     gui_path = os.path.join(os.path.dirname(__file__), "gui.py")
 
     if not os.path.exists(gui_path):
-        print("|   Error:  gui.py not found")
+        print("├─── Error: gui.py not found")
         sys.exit(1)
 
     try:
         subprocess.Popen(["python3", gui_path])
     except Exception as e:
-        print(f"|   Error launching GUI: {e}")
+        print(f"├─── Error launching GUI: {e}")
 
 
 # ---------------- CLI ----------------
@@ -163,20 +163,20 @@ def parse_size_arg():
     try:
         return int(raw)
     except ValueError:
-        print("|   Error:  size must be an integer")
+        print("├─── Error: size must be an integer")
         sys.exit(1)
 
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print(" +--------------------------------+")
-        print(" | Usage:                         |")
-        print(" +--------------------------------+")
-        print(" | ramdisk-manager start [sizeGB] |")
-        print(" | ramdisk-manager stop           |")
-        print(" | ramdisk-manager sync           |")
-        print(" | ramdisk-manager gui            |")
-        print(" +--------------------------------+")
+        print(" ┌────────────────────────────────┐")
+        print(" │ Usage:                         │")
+        print(" ├────────────────────────────────┤")
+        print(" │ ramdisk-manager start [sizeGB] │")
+        print(" │ ramdisk-manager stop           │")
+        print(" │ ramdisk-manager sync           │")
+        print(" │ ramdisk-manager gui            │")
+        print(" └────────────────────────────────┘")
         sys.exit(1)
 
     cmd = sys.argv[1]
