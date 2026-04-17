@@ -106,10 +106,6 @@ Launch with:
 ```bash
 ramdisk-manager gui
 ```
-
-<table align="center" border="4">
-<tr>
-<td>
   
 ### Main controls
 - ℹ️ **Status**: Shows mount state (NOT MOUNTED / MOUNTED)  
@@ -120,7 +116,8 @@ ramdisk-manager gui
 - 🛠 **Config editor**: Adjust defaults (size, interval)  
 - 📜 **Log Panel**: Real-time terminal output  
   
-</td>
+<table align="center" border="4">
+<tr>
 <td>
 <p align="center">
   <a href="https://i.imgur.com/h8PgyCU.png">
@@ -135,6 +132,8 @@ ramdisk-manager gui
     <img alt="Icon" src="https://i.imgur.com/nsRziBZ.png">
   </a>
 </td>
+</tr>
+<tr>
 <td>
 <p align="center">
   <a href="https://i.imgur.com/Ux5CSPc.png">
