@@ -107,11 +107,11 @@ ramdisk-manager gui
 ```
 
 #### Main controls:
-- ℹ️ **Status**: Shows mount state (NOT MOUNTED / MOUNTED / UNKNOWN)
+- ℹ️ **Status**: Shows mount state (NOT MOUNTED / MOUNTED / UNKNOWN)  
 - 🔲 **Mount RAMDisk**: Set size in GB (1-1024) & click *"Start"*  
 - ⏹ **Unmount**: Click *"Stop"* (triggers sync first)  
 - 🔄 **Sync Now**: For one-time manual sync, click *"Sync"*  
-- ⏱ **Auto-sync interval**: Minutes (1-1440)
+- ⏱ **Auto-sync interval**: Minutes (1-1440)  
 - 🛠 **Config editor**: Adjust defaults (size, interval)  
 - 📜 **Log Panel**: Real-time terminal output  
 
