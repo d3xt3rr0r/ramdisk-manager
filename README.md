@@ -80,7 +80,7 @@ pip install --user PySide6
 
 ## 💻 Usage
 
-### CLI Commands
+### CLI commands
 First run via `./run.sh` and wrapper will be installed to `~/.local/bin`
 
 | Command | Description |
