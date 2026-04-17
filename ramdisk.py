@@ -195,4 +195,11 @@ if __name__ == "__main__":
         launch_gui()
 
     else:
-        print("Unknown command")
+        print(" ┌────────────────────────────────┐")
+        print(" │ Usage:                         │")
+        print(" ├────────────────────────────────┤")
+        print(" │ ramdisk-manager start [sizeGB] │")
+        print(" │ ramdisk-manager stop           │")
+        print(" │ ramdisk-manager sync           │")
+        print(" │ ramdisk-manager gui            │")
+        print(" └────────────────────────────────┘")
