@@ -100,14 +100,14 @@ First run via `./run.sh` and wrapper will be installed to `~/.local/bin`
 
 ---
 
-### 🖥 GUI Interface
+## 🖥 GUI Interface
 
 Launch with:
 ```bash
 ramdisk-manager gui
 ```
 
-#### Main controls:
+### Main controls:
 - ℹ️ **Status**: Shows mount state (NOT MOUNTED / MOUNTED / UNKNOWN)  
 - 🔲 **Mount RAMDisk**: Set size in GB (1-1024) & click *"Start"*  
 - ⏹ **Unmount**: Click *"Stop"* (triggers sync first)  
