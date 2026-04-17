@@ -11,7 +11,7 @@
 </td>
 </tr>
 </table>
-<h1 align="center">|  RAMDisk Manager  |  v1.1.2</h1>
+<h1 align="center">|  RAMDisk Manager  |  v1.1.3</h1>
 <p align="center">
   <a href="https://www.python.org/downloads/release/python-38/">
     <img alt="Python" src="https://img.shields.io/badge/python-3.8%2B-blue.svg?logo=python&logoColor=white">
