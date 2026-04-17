@@ -120,24 +120,24 @@ ramdisk-manager gui
 <tr>
 <td>
 <p align="center">
-  <a href="https://i.imgur.com/h8PgyCU.png">
-    <img alt="Icon" src="https://i.imgur.com/h8PgyCU.png">
+  <a href="https://i.imgur.com/BAMFTKd.png">
+    <img alt="Icon" src="https://i.imgur.com/BAMFTKd.png">
   </a>
 </td>
 </tr>
 <tr>
 <td>
 <p align="center">
-  <a href="https://i.imgur.com/nsRziBZ.png">
-    <img alt="Icon" src="https://i.imgur.com/nsRziBZ.png">
+  <a href="https://i.imgur.com/I4j44G1.png">
+    <img alt="Icon" src="https://i.imgur.com/I4j44G1.png">
   </a>
 </td>
 </tr>
 <tr>
 <td>
 <p align="center">
-  <a href="https://i.imgur.com/Ux5CSPc.png">
-    <img alt="Icon" src="https://i.imgur.com/Ux5CSPc.png">
+  <a href="https://i.imgur.com/q5BIPsG.png">
+    <img alt="Icon" src="https://i.imgur.com/q5BIPsG.png">
   </a>
 </td>
 </tr>
