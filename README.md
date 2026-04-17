@@ -110,12 +110,6 @@ ramdisk-manager gui
 <table align="center">
 <tr>
 <td>
-<p align="center">
-  <a href="https://i.imgur.com/h8PgyCU.png">
-    <img alt="Icon" src="https://i.imgur.com/h8PgyCU.png">
-  </a>
-</td>
-<td>
 
 ### Main controls
 - ℹ️ **Status**: Shows mount state (NOT MOUNTED / MOUNTED)  
@@ -126,6 +120,12 @@ ramdisk-manager gui
 - 🛠 **Config editor**: Adjust defaults (size, interval)  
 - 📜 **Log Panel**: Real-time terminal output  
 
+</td>
+<td>
+<p align="center">
+  <a href="https://i.imgur.com/h8PgyCU.png">
+    <img alt="Icon" src="https://i.imgur.com/h8PgyCU.png">
+  </a>
 </td>
 </tr>
 <tr>
