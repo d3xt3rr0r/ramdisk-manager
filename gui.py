@@ -14,7 +14,7 @@ USER_HOME = os.path.expanduser("~")
 RAMDISK_CLI = os.path.join(USER_HOME, ".config", "ramdisk-manager", "ramdisk.py")
 CONFIG_PATH = os.path.join(USER_HOME, ".config", "ramdisk-manager", "config.json")
 RAMDISK_PATH = os.path.join(USER_HOME, "RAMDisk")
-icon_path = os.path.join(os.path.expanduser("~"), ".config", "ramdisk-manager", "icon_white.png")
+icon_path = os.path.join(os.path.expanduser("~"), ".config", "ramdisk-manager", "icon.png")
 
 DEFAULT_CONFIG = {"size_gb": 4, "interval_min": 1}
 
@@ -64,7 +64,7 @@ class CmdWorker(QThread):
 class RamdiskGUI(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("|  RAMDisk Manager  |  v1.1.2")
+        self.setWindowTitle("|  RAMDisk Manager  |  v1.1.3")
         self.setFixedSize(300, 300)
         self.setWindowIcon(QIcon(icon_path))
         self.workers = []
