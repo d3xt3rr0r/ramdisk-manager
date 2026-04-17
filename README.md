@@ -174,7 +174,7 @@ ramdisk-manager gui
 ## 📄 License
 
 Distributed under the **[MIT License](https://github.com/d3xt3rr0r/ramdisk-manager/blob/main/LICENSE)**.  
-© 2024 [d3xt3rr0r](https://github.com/d3xt3rr0r)
+© 2026 [d3xt3rr0r](https://github.com/d3xt3rr0r)
 
 ---
 
