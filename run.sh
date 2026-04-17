@@ -32,10 +32,14 @@ if [ ! -f "$SCRIPT_PATH" ]; then
     exit 1
 fi
 if [ -z "$1" ]; then
-    echo "Usage:"
-    echo "run.sh start [sizeGB]"
-    echo "run.sh stop"
-    echo "run.sh sync"
+    echo " +-----------------------+"
+    echo " | Usage:                |"
+    echo " +-----------------------+"
+    echo " | run.sh start [sizeGB] |"
+    echo " | run.sh stop           |"
+    echo " | run.sh sync           |"
+    echo " | run.sh gui            |"
+    echo " +-----------------------+"
     exit 1
 fi
 
