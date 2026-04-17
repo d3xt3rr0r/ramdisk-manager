@@ -124,14 +124,14 @@ ramdisk-manager gui
     <img alt="Icon" src="https://i.imgur.com/h8PgyCU.png">
   </a>
 </td>
+</tr>
+<tr>
 <td>
 <p align="center">
   <a href="https://i.imgur.com/nsRziBZ.png">
     <img alt="Icon" src="https://i.imgur.com/nsRziBZ.png">
   </a>
 </td>
-</tr>
-<tr>
 <td>
 <p align="center">
   <a href="https://i.imgur.com/Ux5CSPc.png">
