@@ -142,8 +142,7 @@ ramdisk-manager gui
 ├── gui.py             # PySide6 GUI (configurable widgets + logs)
 ├── run.sh             # Bash wrapper (imports/invokes ramdisk.py)
 ├── config.json        # Sample config (auto-generated on first run)
-├── icon_black.png     # Black icon
-├── icon_white.png     # White icon
+├── icon.png           # Program icon
 ├── README.md          # This file
 └── LICENSE            # MIT License
 ```
