@@ -12,7 +12,7 @@
 </tr>
 </table>
 <h1 align="center">RAMDisk Manager</h1>
-<p align="left">Version: 1.2.0>
+<p align="right">Version: 1.2.0
 <p align="center">
   <a href="https://www.python.org/downloads/release/python-38/">
     <img alt="Python" src="https://img.shields.io/badge/python-3.8%2B-blue.svg?logo=python&logoColor=white">
