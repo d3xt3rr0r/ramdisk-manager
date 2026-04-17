@@ -26,8 +26,8 @@
 <p align="right">Version: 1.2.0
 <p align="center">
   <strong>🤖 Simple & efficient RAMDisk manager for Linux — with CLI and modern GUI</strong><br>
-  💾 Creates volatile in-RAM filesystems, enables safe data persistence via sync with persistent<br> 
-  storage, and features one-click GUI control.
+  💾 Creates volatile in-RAM filesystems, enables safe data persistence via sync with<br>
+  persistent storage, and features one-click GUI control.
 </p>
 
 ---
