@@ -13,7 +13,7 @@ install_wrapper() {
 python3 "$SCRIPT_PATH" "\$@"
 EOF
         chmod +x "$WRAPPER_PATH"
-        echo "Wrapper installed: $WRAPPER_PATH"
+        echo "├─── Wrapper installed: $WRAPPER_PATH"
     fi
 
     if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
@@ -28,18 +28,18 @@ EOF
 install_wrapper
 
 if [ ! -f "$SCRIPT_PATH" ]; then
-    echo "Error: ramdisk.py not found at $SCRIPT_PATH"
+    echo "├─── Error: ramdisk.py not found at $SCRIPT_PATH"
     exit 1
 fi
 if [ -z "$1" ]; then
-    echo " ┌───────────────────────┐"
-    echo " │ Usage:                │"
-    echo " ├───────────────────────┤"
-    echo " │ run.sh start [sizeGB] │"
-    echo " │ run.sh stop           │"
-    echo " │ run.sh sync           │"
-    echo " │ run.sh gui            │"
-    echo " └───────────────────────┘"
+    echo " ┌────────────────────────────────┐"
+    echo " │ Usage:                         │"
+    echo " ├────────────────────────────────┤"
+    echo " │ ramdisk-manager start [sizeGB] │"
+    echo " │ ramdisk-manager stop           │"
+    echo " │ ramdisk-manager sync           │"
+    echo " │ ramdisk-manager gui            │"
+    echo " └────────────────────────────────┘"
     exit 1
 fi
 
