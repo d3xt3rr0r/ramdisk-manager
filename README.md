@@ -127,7 +127,7 @@ ramdisk-manager gui
 - 🛠 **Config editor**: Adjust defaults (size, interval)  
 - 📜 **Log Panel**: Real-time terminal output  
 
-<table align="left">
+<table align="center">
 <tr>
 <td>
 <p align="center">
