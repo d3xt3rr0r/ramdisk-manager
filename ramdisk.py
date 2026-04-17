@@ -107,7 +107,7 @@ def remove_ramdisk():
                 return
 
         shutil.rmtree(RAMDISK_PATH, ignore_errors=True)
-        print("|   RAMDisk unmounted + deleted")
+        print("|   RAMDisk unmounted & deleted")
 
 
 # ---------------- COMMANDS ----------------
