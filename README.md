@@ -107,7 +107,7 @@ Launch with:
 ramdisk-manager gui
 ```
 
-<table align="center" border="0">
+<table align="center" border="4">
 <tr>
 <td>
   
