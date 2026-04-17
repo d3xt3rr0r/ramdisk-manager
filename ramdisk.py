@@ -81,7 +81,7 @@ def mount_ramdisk(size_gb):
             ],
             check=True
         )
-        print(f"|   RAMDisk created:  {size_gb}GB")
+        print(f"|   RAMDisk created:  {size_gb} GB")
         print(f"|   Path:  {RAMDISK_PATH}")
     except subprocess.CalledProcessError as e:
         print(f"|   Error mounting RAMDisk: {e}")
