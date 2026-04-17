@@ -107,7 +107,7 @@ Launch with:
 ramdisk-manager gui
 ```
 
-<table align="right">
+<table align="center">
 <tr>
 <td>
 <p align="center">
@@ -115,8 +115,7 @@ ramdisk-manager gui
     <img alt="Icon" src="https://i.imgur.com/h8PgyCU.png">
   </a>
 </td>
-</tr>
-</table>
+<td>
 
 ### Main controls
 - ℹ️ **Status**: Shows mount state (NOT MOUNTED / MOUNTED)  
@@ -127,7 +126,8 @@ ramdisk-manager gui
 - 🛠 **Config editor**: Adjust defaults (size, interval)  
 - 📜 **Log Panel**: Real-time terminal output  
 
-<table align="right">
+</td>
+</tr>
 <tr>
 <td>
 <p align="center">
