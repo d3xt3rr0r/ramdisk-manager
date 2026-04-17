@@ -101,6 +101,7 @@ First run via `./run.sh` and wrapper will be installed to `~/.local/bin`
 ---
 
 ### 🖥 GUI Interface
+
 Launch with:
 ```bash
 ramdisk-manager gui
@@ -114,8 +115,6 @@ ramdisk-manager gui
 - ⏱ **Auto-sync interval**: Minutes (1-1440)  
 - 🛠 **Config editor**: Adjust defaults (size, interval)  
 - 📜 **Log Panel**: Real-time terminal output  
-
----
 
 <table align="center">
 <tr>
