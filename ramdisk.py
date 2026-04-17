@@ -169,10 +169,14 @@ def parse_size_arg():
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage:")
-        print("ramdisk-manager start [sizeGB]")
-        print("ramdisk-manager stop")
-        print("ramdisk-manager sync")
+        print(" +--------------------------------+")
+        print(" | Usage:                         |")
+        print(" +--------------------------------+")
+        print(" | ramdisk-manager start [sizeGB] |")
+        print(" | ramdisk-manager stop           |")
+        print(" | ramdisk-manager sync           |")
+        print(" | ramdisk-manager gui            |")
+        print(" +--------------------------------+")
         sys.exit(1)
 
     cmd = sys.argv[1]
