@@ -1,22 +1,10 @@
 
 ---
 
-<table align="center">
-<tr>
-<td>
 <p align="center>
-  <a href="https://github.com/d3xt3rr0r/ramdisk-manager/blob/main/icon_black.png">
-    <img alt="Icon" src="https://github.com/d3xt3rr0r/ramdisk-manager/blob/main/icon_black.png">
+  <a href="https://github.com/d3xt3rr0r/ramdisk-manager/blob/main/icon.png">
+    <img alt="Icon" src="https://github.com/d3xt3rr0r/ramdisk-manager/blob/main/icon.png">
   </a>
-</td>
-<td>
-<p align="center">
-  <a href="https://github.com/d3xt3rr0r/ramdisk-manager/blob/main/icon_white.png">
-    <img alt="Icon" src="https://github.com/d3xt3rr0r/ramdisk-manager/blob/main/icon_white.png">
-  </a>
-</td>
-</tr>
-</table>
 <h1 align="center">|  RAMDisk Manager  |  v1.1.2</h1>
 <p align="center">
   <a href="https://www.python.org/downloads/release/python-38/">
