@@ -106,7 +106,8 @@ Launch with:
 ```bash
 ramdisk-manager gui
 ```
-<table align="center">
+
+<table align="left">
 <tr>
 <td>
 <p align="center">
@@ -126,7 +127,7 @@ ramdisk-manager gui
 - 🛠 **Config editor**: Adjust defaults (size, interval)  
 - 📜 **Log Panel**: Real-time terminal output  
 
-<table align="center">
+<table align="left">
 <tr>
 <td>
 <p align="center">
