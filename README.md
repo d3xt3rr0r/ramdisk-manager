@@ -125,8 +125,8 @@ ramdisk-manager gui
 </td>
 <td>
 <p align="center">
-  <a href="https://i.imgur.com/E6lO1bL.png">
-    <img alt="Icon" src="https://i.imgur.com/E6lO1bL.png">
+  <a href="https://i.imgur.com/Nf5TaEF.png">
+    <img alt="Icon" src="https://i.imgur.com/Nf5TaEF.png">
   </a>
 </td>
 </tr>
