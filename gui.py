@@ -76,12 +76,12 @@ class RamdiskGUI(QWidget):
         self.status_label = QLabel("????????? Status: UNKNOWN ?????????")
         self.status_label.setStyleSheet("color: yellow; font-family: monospace; font-size: 13px;")
 
-        self.version_label = QLabel('Version: 1.2.0')
+        self.version_label = QLabel('√ersi○n↕ 1·2·1')
         self.version_label.setOpenExternalLinks(True)
         self.version_label.setStyleSheet("color: gray; font-size: 11px;")
         self.version_label.setAlignment(Qt.AlignRight)
 
-        self.author_label = QLabel('Author: <a href="https://github.com/d3xt3rr0r">github.com/d3xt3rr0r</a>')
+        self.author_label = QLabel('Au┼h○r↕ <a href="https://github.com/d3xt3rr0r">github.com/d3xt3rr0r</a>')
         self.author_label.setOpenExternalLinks(True)
         self.author_label.setStyleSheet("color: gray; font-size: 11px;")
         self.author_label.setAlignment(Qt.AlignRight)
@@ -99,7 +99,7 @@ class RamdiskGUI(QWidget):
         self.stop_btn = QPushButton("Stop")
         self.stop_btn.setStyleSheet("color: red; font-family: monospace; font-size: 13px;")
         self.sync_btn = QPushButton("Sync")
-        self.sync_btn.setStyleSheet("color: purple; font-family: monospace; font-size: 13px;")
+        self.sync_btn.setStyleSheet("color: blue; font-family: monospace; font-size: 13px;")
 
         self.start_btn.clicked.connect(self.start_ramdisk)
         self.stop_btn.clicked.connect(self.stop_ramdisk)
@@ -121,14 +121,14 @@ class RamdiskGUI(QWidget):
         layout.addWidget(self.status_label)
 
         h1 = QHBoxLayout()
-        label_size = QLabel("RAMDisk size |GB|:         ")
+        label_size = QLabel("RAMDisk size:          ╣GB╠")
         label_size.setStyleSheet("font-family: monospace; font-size: 12px;")
         h1.addWidget(label_size)
         h1.addWidget(self.size_spin)
         layout.addLayout(h1)
 
         h2 = QHBoxLayout()
-        label_sync = QLabel("Auto-sync interval |min|:  ")
+        label_sync = QLabel("Auto-sync interval:   ╣min╠")
         label_sync.setStyleSheet("font-family: monospace; font-size: 12px;")
         h2.addWidget(label_sync)
         h2.addWidget(self.sync_spin)
@@ -161,10 +161,10 @@ class RamdiskGUI(QWidget):
     def update_status(self):
         output = subprocess.getoutput(f"mount | grep {RAMDISK_PATH}")
         if RAMDISK_PATH in output:
-            self.status_label.setText("///////// Status: MOUNTED /////////")
+            self.status_label.setText("║║║║║║║║║ Status: MOUNTED ║║║║║║║║║")
             self.status_label.setStyleSheet("color: green; font-family: monospace; font-size: 13px;")
         else:
-            self.status_label.setText("======= Status: NOT MOUNTED =======")
+            self.status_label.setText("═══════ Status: NOT MOUNTED ═══════")
             self.status_label.setStyleSheet("color: red; font-family: monospace; font-size: 13px;")
 
     # ---------------- AUTOSYNC ----------------
@@ -224,13 +224,13 @@ class RamdiskGUI(QWidget):
     # ---------------- RESULT ----------------
     def on_result(self, res):
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        self.log_text.append(f"|-----[ {timestamp} ]-----")
+        self.log_text.append(f"┌ {timestamp} ┐")
         self.log_text.append(f"{res}")
 
         interval = self.sync_spin.value()
 
         if self.last_cmd in ["start", "sync"]:
-            self.log_text.append(f"|   Auto-sync interval:  {interval} min")
+            self.log_text.append(f"└─── Auto-sync interval: {interval} min")
 
         self.update_status()
 
