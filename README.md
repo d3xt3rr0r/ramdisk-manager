@@ -120,15 +120,15 @@ ramdisk-manager gui
 <table align="center">
 <tr>
 <td>
-<p align="center>
-  <a href="https://i.imgur.com/xERlrXs.png">
-    <img alt="Icon" src="https://i.imgur.com/xERlrXs.png">
+<p align="center">
+  <a href="https://i.imgur.com/2JWE5Fz.png">
+    <img alt="Icon" src="https://i.imgur.com/2JWE5Fz.png">
   </a>
 </td>
 <td>
 <p align="center">
-  <a href="https://i.imgur.com/Nf5TaEF.png">
-    <img alt="Icon" src="https://i.imgur.com/Nf5TaEF.png">
+  <a href="https://i.imgur.com/oYmITTS.png">
+    <img alt="Icon" src="https://i.imgur.com/oYmITTS.png">
   </a>
 </td>
 </tr>
